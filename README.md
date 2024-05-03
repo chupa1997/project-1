@@ -1,25 +1,25 @@
-# BlackJack
+# Rock Paper and Scissor 
 
 ## Date: 30/4/2024
 
 ### By: Abdulla Hisham
 
-#### [Instagram](https://www.instagram.com/3abood23/?hl=en)| [GitHub]([https://github.com/chupa1997) | [LinkedIn](www.linkedin.com/in/aboodisa)
+#### [Instagram](https://www.instagram.com/3abood23/?hl=en)| [GitHub]([https://www.github.com/chupa1997) | [LinkedIn](www.linkedin.com/in/aboodisa)
 
 ---
 
-### **BlackJack Cards Game**
+### ** Rock Paper and Scissor Game**
 
 #### A brief description of the project, what it's about, when and what you made it for, etc. ...
 
 ---
 
-### place your bet and get ready to win
+### challing CPU with the famous Rock Paper and Scissor game
 ---
 
-### **_Get ready to hit the BlackJack_**
+### **_Ready to win?_**
 
-##### enjoy playing Blackjack without betting real money.
+##### enjoy playing your fav Rock Paper and Scissor game all day long.
 
 ---
 
@@ -36,9 +36,8 @@
 
 ### **_Future Updates_**
 
-- [ ] Poker will be added in future
-- [ ] Slots will have its own section 
-
+- [ ] going to add more animations
+- [ ] 2 players option coming soon 
 
 ---
 
