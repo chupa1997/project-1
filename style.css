@@ -8,5 +8,14 @@ game {
 }
 .title {
   font-size: larger;
-  position: absolute;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img {
+  height: 10rem;
+  width: 10rem;
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
 }
