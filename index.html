@@ -3,17 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Rock Paper Scissor</title>
 </head>
 <body>
+  <section class="game">
   <!-- Title -->
-
+  <div class="title">Rock Paper Scissor</div>
   <!-- Score Display -->
-
+<div class="score">
+  <div class="playerScore">
+    <h2>player: <span>0</span></h2>
+  </div>
+  <div class="CPUScore">
+    <h2>CPU: <span>0</span></h2>
+  </div>
+</div>
+<div class="move">Choose your move</div>
   <!-- buttons -->
-
+  <div class="options">
+    <div class="option">
+      <img src="img/rock.png" alt="">
+    </div>
+    <div class="option">
+      <img src="img/paper.png" alt="">
+    </div>
+    <div class="option">
+      <img src="img/scisssors.png" alt="">
+    </div>
+  </div>
   <!-- Winner Check -->
+  <div class="result"></div>
 
   <!-- restart -->
+  <button class="restart">Restart</button>
+</section>
 </body>
 </html>
