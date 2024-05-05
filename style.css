@@ -18,24 +18,34 @@ body {
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
 }
-img {
-  height: 10rem;
-  width: 10rem;
-}
-.options {
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  cursor: pointer;
-}
 .score {
   display: flex;
   width: 30vw;
   justify-content: space-evenly;
 }
-.count {
+img {
+  height: 7rem;
+  width: 7rem;
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.rock,
+.paper,
+.scissor {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: crimson;
+  border-color: azure;
+  cursor: pointer;
+}
+.player-count,
+.CPU-count {
   text-align: center;
   margin-top: 1rem;
+  font-size: 2rem;
 }
 .move {
   font-size: 2rem;
@@ -43,9 +53,12 @@ img {
   margin-top: 15rem;
 }
 .restart {
+  display: none;
   margin-top: 2rem;
   padding: 1rem;
-  background: white;
+  background-color: darkred;
+  outline: none;
+  border: none;
   border-radius: 10px;
   cursor: pointer;
 }

@@ -9,34 +9,38 @@
 </head>
 <body>
   <section class="game">
-  <!-- Title -->
+  <!-- Title --> 
   <div class="title">Rock Paper Scissor</div>
   <!-- Score Display -->
 <div class="score">
   <div class="playerScore">
-    <h2>player: <span>0</span></h2>
+    <h2>Player</h2>
+    <p class="player-count">0</p>
   </div>
   <div class="CPUScore">
-    <h2>CPU: <span>0</span></h2>
+    <h2>CPU</h2>
+    <p class="CPU-count">0</p>
   </div>
 </div>
 <div class="move">Choose your move</div>
+   <!-- moves left -->
+   <div class="movesLeft">Moves Left: 10 </div>
   <!-- buttons -->
   <div class="options">
-    <div class="rock">
+    <button class="rock">
       <img src="img/rock.png" alt="">
-    </div>
-    <div class="paper">
+    </button>
+    <button class="paper">
       <img src="img/paper.png" alt="">
-    </div>
-    <div class="scisssor">
+    </button>
+    <button class="scissor">
       <img src="img/scisssors.png" alt="">
-    </div>
+    </button>
   </div>
   <!-- Winner Check -->
   <div class="result"> </div>
   <!-- restart -->
-  <button class="restart">Restart</button>
+  <button class="restart"></button>
 </section>
 </body>
 </html>
