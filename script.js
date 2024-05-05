@@ -1,11 +1,17 @@
-// adding variable here
+// adding game variable here
 
-// Function to choose button
+// Function to choose button playGame
 
 // Function to start playing game
 
+// Function to check winner
+
+// function to call gameOver after 5 moves
+
 // Function to decide winner
 
-// Function to call winner
+// function to run when game is over
 
-// finction for gameover call
+// call playGame inside game function
+
+// calling game function
