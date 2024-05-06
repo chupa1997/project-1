@@ -5,7 +5,6 @@ let closeBtn
 //Creates variables for every element in the html
 const playerScore_span = document.getElementById('player-score')
 const cpuScore_span = document.getElementById('cpu-score')
-// const scoreBoard_div = document.getElementById(".score-board")
 const restart = document.getElementById('restart')
 const result = document.getElementById('result')
 const modal = document.querySelector('.modal')
@@ -15,26 +14,20 @@ const scissors_div = document.getElementById('scissors')
 
 //Function for Cpu's Choice
 function getCpuChoice() {
-  //Array full of 3 choices
   const choices = ['rock', 'paper', 'scissors']
-  //sets random number and round it down to nearest number
   const randomNumber = Math.floor(Math.random() * 3)
-  //returns random nunber for Cpu choice
   return choices[randomNumber]
 }
 
-//Function that checks whether player or cpu wins
+//Function for winner check , increments player score
 function win(playerChoice, cpuChoice) {
-  //increments player score
   playerScore++
-  //changes playerscore element text to playerScore variable and cpu element to cpuScore
   playerScore_span.innerHTML = playerScore
   cpuScore_span.innerHTML = cpuScore
-  //shows the winner in the result span
   result.innerHTML = `<span class="close"></span> <h1 class="text-win">You win!</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
   modal.style.display = 'flex'
 }
-//function to check who loses
+//function to check who loses, increments CPU score
 function lose(playerChoice, cpuChoice) {
   cpuScore++
   playerScore_span.innerHTML = playerScore
@@ -71,21 +64,19 @@ function play(playerChoice) {
       break
   }
 }
+// adding eventListener to rock, paper and scissor to know when clicked on it
+rock_div.addEventListener('click', function () {
+  play('rock')
+})
 
-function main() {
-  rock_div.addEventListener('click', function () {
-    play('rock')
-  })
+paper_div.addEventListener('click', function () {
+  play('paper')
+})
 
-  paper_div.addEventListener('click', function () {
-    play('paper')
-  })
-
-  scissors_div.addEventListener('click', function () {
-    play('scissors')
-  })
-}
-
+scissors_div.addEventListener('click', function () {
+  play('scissors')
+})
+// funtion to close modal by using (e) as a parameter
 function clearModal(e) {
   closeBtn = document.querySelector('.close')
 
@@ -98,14 +89,14 @@ function clearModal(e) {
   }
 }
 
-//restarts game and sets everything to 0 and sets the elememnts to player and cpu score
+//restart game and reset score to 0
 function restartGame() {
   playerScore = 0
   cpuScore = 0
   playerScore_span.innerHTML = playerScore
   cpuScore_span.innerHTML = cpuScore
 }
-
+// Event listener for window click to call clearModal then hides it
 restart.addEventListener('click', restartGame)
 window.addEventListener('click', clearModal)
 main()
