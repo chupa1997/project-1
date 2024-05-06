@@ -38,7 +38,7 @@ img {
   padding: 1rem;
   border-radius: 10px;
   background-color: crimson;
-  border-color: azure;
+  border-color: black;
   cursor: pointer;
 }
 .player-count,
