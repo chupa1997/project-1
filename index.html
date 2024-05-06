@@ -8,39 +8,30 @@
   <title>Rock Paper Scissor</title>
 </head>
 <body>
-  <section class="game">
-  <!-- Title --> 
-  <div class="title">Rock Paper Scissor</div>
-  <!-- Score Display -->
-<div class="score">
-  <div class="playerScore">
-    <h2>Player</h2>
-    <p class="player-count">0</p>
+  <h1 class="title">Rock Paper Scissors</h1>
+  <div class="btn-container">  
+    <button id="restart" class="restart-btn">Restart Game</button>
   </div>
-  <div class="CPUScore">
-    <h2>CPU</h2>
-    <p class="CPU-count">0</p>
+  <div class="score-board">
+    <div id="player-name" class="name">Player</div>
+    <div id="cpu-name" class="name">Compu</div>
+    <span id="player-score">0</span>:<span id="cpu-score">0</span>
   </div>
-</div>
-<div class="move">Choose your move</div>
-   <!-- moves left -->
-   <div class="movesleft">Moves Left: 10</div>
-  <!-- buttons -->
-  <div class="options">
-    <button class="rock">
+  <div class="choices">
+    <div id="rock" class="choice">
       <img src="img/rock.png" alt="">
-    </button>
-    <button class="paper">
+    </div>
+    <div id="paper" class="choice">
       <img src="img/paper.png" alt="">
-    </button>
-    <button class="scissors">
+    </div>
+    <div id="scissors" class="choice">
       <img src="img/scisssors.png" alt="">
-    </button>
+    </div>
   </div>
-  <!-- Winner Check -->
-  <div class="result"> </div>
-  <!-- restart -->
-  <button class="restart"></button>
-</section>
+  <h2>Make your choice</h2>
+
+  <div class="modal">
+    <div id="result" class="modal-content"></div>
+  </div>
 </body>
 </html>
