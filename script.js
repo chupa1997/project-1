@@ -11,6 +11,8 @@ const modal = document.querySelector('.modal')
 const rock_div = document.getElementById('rock')
 const paper_div = document.getElementById('paper')
 const scissors_div = document.getElementById('scissors')
+const darkColor = document.getElementById('darkMode')
+let dark = true
 
 //Function for Cpu's Choice
 function getCpuChoice() {
@@ -24,7 +26,7 @@ function win(playerChoice, cpuChoice) {
   playerScore++
   playerScore_span.innerHTML = playerScore
   cpuScore_span.innerHTML = cpuScore
-  result.innerHTML = `<span class="close"></span> <h1 class="text-win">You win!</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
+  result.innerHTML = `<span class="close"></span> <h1 class="text-win">You win</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
   modal.style.display = 'flex'
 }
 //function to check who loses, increments CPU score
@@ -88,15 +90,30 @@ function clearModal(e) {
     })
   }
 }
+// function for DarkMode
+const darkMode = () => {
+  if (dark) {
+    document.body.style.backgroundColor = 'black'
+    document.body.style.color = 'antiquewhite'
+    dark = false
+  } else {
+    document.body.style.backgroundColor = 'antiquewhite'
+    document.body.style.color = 'darkred'
+
+    dark = true
+  }
+}
 
 //restart game and reset score to 0
-function restartGame() {
+const restartGame = () => {
   playerScore = 0
   cpuScore = 0
   playerScore_span.innerHTML = playerScore
   cpuScore_span.innerHTML = cpuScore
+  modal.innerText = ' '
 }
 // Event listener for window click to call clearModal then hides it
+darkColor.addEventListener('click', darkMode)
 restart.addEventListener('click', restartGame)
 window.addEventListener('click', clearModal)
-main()
+modal()

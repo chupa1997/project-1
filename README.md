@@ -10,7 +10,7 @@
 
 ### ** Rock Paper and Scissor Game**
 
-#### A brief description of the project, what it's about, when and what you made it for, etc. ...
+#### The game of the peopel! everybody plays Rock Paper and Scissors either for fun or to decide something between 2 people. i made this game as my Project because i use it almost daily to solve most of my problems and it might help you with fixing your problems too.
 
 ---
 
@@ -21,6 +21,8 @@
 ### **_Ready to win?_**
 
 ##### enjoy playing your fav Rock Paper and Scissor game all day long.
+
+#### try not to lost your mind taking L's from CPU
 
 ---
 
