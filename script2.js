@@ -7,10 +7,10 @@ const plsyer2Score_span = document.getElementById('plsyer2-score')
 const restart = document.getElementById('restart')
 const result = document.getElementById('result')
 const modal = document.querySelector('.modal')
-closeBtn = document.querySelector('.close')
-const rock_div = document.getElementById('rock')
-const paper_div = document.getElementById('paper')
-const scissors_div = document.getElementById('scissors')
+const closeBtn = document.querySelector('.close')
+const rock = document.getElementById('rock')
+const paper = document.getElementById('paper')
+const scissors = document.getElementById('scissors')
 const darkColor = document.getElementById('darkMode')
 let dark = true
 
@@ -81,15 +81,15 @@ const play2 = (player2Choice) => {
   }
 }
 // adding eventListener to rock, paper and scissor to know when clicked on it
-rock_div.addEventListener('click', () => {
+rock.addEventListener('click', () => {
   play('rock')
 })
 
-paper_div.addEventListener('click', () => {
+paper.addEventListener('click', () => {
   play('paper')
 })
 
-scissors_div.addEventListener('click', () => {
+scissors.addEventListener('click', () => {
   play('scissors')
 })
 // funtion to close modal by using (e) as a parameter
@@ -118,8 +118,6 @@ const darkMode = () => {
 
 //restart game and reset score to 0
 const restartGame = () => {
-  playerScore = 0
-  plsyer2Score = 0
   playerScore_span.innerHTML = playerScore
   plsyer2Score_span.innerHTML = plsyer2Score
   modal.innerText = ' '

@@ -7,7 +7,7 @@ const cpuScore_span = document.getElementById('cpu-score')
 const restart = document.getElementById('restart')
 const result = document.getElementById('result')
 const modal = document.querySelector('.modal')
-closeBtn = document.querySelector('.close')
+const closeBtn = document.querySelector('.close')
 const rock_div = document.getElementById('rock')
 const paper_div = document.getElementById('paper')
 const scissors_div = document.getElementById('scissors')
@@ -21,7 +21,7 @@ const getCpuChoice = () => {
   return choices[randomNumber]
 }
 
-//Function for winner check , increments player score
+//Function for winner check , increments player score. win function takes 2 arguments
 const win = (playerChoice, cpuChoice) => {
   playerScore++
   playerScore_span.innerHTML = playerScore
@@ -78,12 +78,12 @@ paper_div.addEventListener('click', () => {
 scissors_div.addEventListener('click', () => {
   play('scissors')
 })
-// funtion to close modal by using (e) as a parameter
+// funtion to close modal by using (element) as a parameter
 const clearModal = (e) => {
   if (e.target == modal) {
     modal.style.display = 'none'
   } else if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
+    closeBtn.addEventListener('click', () => {
       modal.style.display = 'none'
     })
   }
@@ -96,7 +96,7 @@ const darkMode = () => {
     dark = false
   } else {
     document.body.style.backgroundColor = 'antiquewhite'
-    document.body.style.color = 'darkred'
+    document.body.style.color = 'black'
 
     dark = true
   }
@@ -114,4 +114,4 @@ const restartGame = () => {
 darkColor.addEventListener('click', darkMode)
 restart.addEventListener('click', restartGame)
 window.addEventListener('click', clearModal)
-modal()
+// main()
