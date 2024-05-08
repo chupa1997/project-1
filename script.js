@@ -6,8 +6,6 @@ const playerScore_span = document.getElementById('player-score')
 const cpuScore_span = document.getElementById('cpu-score')
 const restart = document.getElementById('restart')
 const result = document.getElementById('result')
-const modal = document.querySelector('.modal')
-const closeBtn = document.querySelector('.close')
 const rock_div = document.getElementById('rock')
 const paper_div = document.getElementById('paper')
 const scissors_div = document.getElementById('scissors')
@@ -19,30 +17,6 @@ const getCpuChoice = () => {
   const choices = ['rock', 'paper', 'scissors']
   const randomNumber = Math.floor(Math.random() * 3)
   return choices[randomNumber]
-}
-
-//Function for winner check , increments player score. win function takes 2 arguments
-const win = (playerChoice, cpuChoice) => {
-  playerScore++
-  playerScore_span.innerHTML = playerScore
-  cpuScore_span.innerHTML = cpuScore
-  result.innerHTML = `<h1 class="text-win">You win</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
-  modal.style.display = 'flex'
-}
-//function to check who loses, increments CPU score
-const lose = (playerChoice, cpuChoice) => {
-  cpuScore++
-  playerScore_span.innerHTML = playerScore
-  cpuScore_span.innerHTML = cpuScore
-  result.innerHTML = `<h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
-  modal.style.display = 'flex'
-}
-//checks if there is a draw
-const draw = (playerChoice, cpuChoice) => {
-  playerScore_span.innerHTML = playerScore
-  cpuScore_span.innerHTML = cpuScore
-  result.innerHTML = ` <h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`
-  modal.style.display = 'flex'
 }
 
 //starts with player choice and randomly chooses who wins the round
@@ -79,15 +53,28 @@ scissors_div.addEventListener('click', () => {
   play('scissors')
 })
 
-// funtion to close modal by using (element) as a parameter
-const clearModal = (e) => {
-  if (e.target == modal) {
-    modal.style.display = 'none'
-  } else if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none'
-    })
-  }
+//Function for winner check , increments player score. win function takes 2 arguments
+const win = (playerChoice, cpuChoice) => {
+  playerScore++
+  playerScore_span.innerHTML = playerScore
+  cpuScore_span.innerHTML = cpuScore
+  result.innerHTML = `<h1 class="text-win">You win</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
+  result.style.display = 'flex'
+}
+//function to check who loses, increments CPU score
+const lose = (playerChoice, cpuChoice) => {
+  cpuScore++
+  playerScore_span.innerHTML = playerScore
+  cpuScore_span.innerHTML = cpuScore
+  result.innerHTML = `<h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
+  result.style.display = 'flex'
+}
+//checks if there is a draw
+const draw = (playerChoice, cpuChoice) => {
+  playerScore_span.innerHTML = playerScore
+  cpuScore_span.innerHTML = cpuScore
+  result.innerHTML = ` <h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`
+  result.style.display = 'flex'
 }
 
 // function for DarkMode
@@ -112,7 +99,6 @@ const restartGame = () => {
   cpuScore_span.innerText = cpuScore
   result.innerText = ' '
 }
-// Event listener for window click to call clearModal then hides it
+// Event listener for window click to call clearresult then hides it
 darkColor.addEventListener('click', darkMode)
 restart.addEventListener('click', restartGame)
-window.addEventListener('click', clearModal)
