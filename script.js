@@ -80,27 +80,16 @@ scissors_div.addEventListener('click', () => {
 })
 
 // funtion to close modal by using (element) as a parameter
-// const clearModal = (e) => {
-//   closeBtn = document.querySelector('.close')
-//   if (e.target == modal) {
-//     modal.style.display = 'none'
-//   } else if (closeBtn) {
-//     closeBtn.addEventListener('click', () => {
-//       modal.style.display = 'none'
-//     })
-//   }
-// }
-function clearModal(e) {
-  closeBtn = document.querySelector('.close')
-
+const clearModal = (e) => {
   if (e.target == modal) {
     modal.style.display = 'none'
   } else if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
+    closeBtn.addEventListener('click', () => {
       modal.style.display = 'none'
     })
   }
 }
+
 // function for DarkMode
 const darkMode = () => {
   if (dark) {
@@ -119,9 +108,9 @@ const darkMode = () => {
 const restartGame = () => {
   playerScore = 0
   cpuScore = 0
-  playerScore_span.innerHTML = playerScore
-  cpuScore_span.innerHTML = cpuScore
-  modal.innerText = ' '
+  playerScore_span.innerText = playerScore
+  cpuScore_span.innerText = cpuScore
+  result.innerText = ' '
 }
 // Event listener for window click to call clearModal then hides it
 darkColor.addEventListener('click', darkMode)
