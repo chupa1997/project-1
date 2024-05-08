@@ -4,7 +4,7 @@
 
 ### By: Abdulla Hisham
 
-#### [Instagram](https://www.instagram.com/3abood23/?hl=en)| [GitHub]([https://www.github.com/chupa1997) | [LinkedIn](www.linkedin.com/in/aboodisa)
+#### [Instagram](https://www.instagram.com/3abood23/?hl=en)| [GitHub](https://github.com/chupa1997) | [LinkedIn](www.linkedin.com/in/aboodisa)
 
 ---
 
