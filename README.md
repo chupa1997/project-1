@@ -28,11 +28,9 @@
 
 ### **_Screenshots_**
 
-##img1
-![image](./img/01.png)
+##### image header 1
 
-##img2
-![image](./img/02.png)
+##### image header 2
 
 ---
 
