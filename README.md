@@ -28,9 +28,7 @@
 
 ### **_Screenshots_**
 
-![img](./img/Screenshot%202024-05-08%20at%204.18.52%20PM.png)
 
-![img](./img/Screenshot%202024-05-08%20at%204.19.52%20PM.png)
 
 ---
 
