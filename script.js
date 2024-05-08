@@ -78,12 +78,25 @@ paper_div.addEventListener('click', () => {
 scissors_div.addEventListener('click', () => {
   play('scissors')
 })
+
 // funtion to close modal by using (element) as a parameter
-const clearModal = (e) => {
+// const clearModal = (e) => {
+//   closeBtn = document.querySelector('.close')
+//   if (e.target == modal) {
+//     modal.style.display = 'none'
+//   } else if (closeBtn) {
+//     closeBtn.addEventListener('click', () => {
+//       modal.style.display = 'none'
+//     })
+//   }
+// }
+function clearModal(e) {
+  closeBtn = document.querySelector('.close')
+
   if (e.target == modal) {
     modal.style.display = 'none'
   } else if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
+    closeBtn.addEventListener('click', function () {
       modal.style.display = 'none'
     })
   }
@@ -114,4 +127,3 @@ const restartGame = () => {
 darkColor.addEventListener('click', darkMode)
 restart.addEventListener('click', restartGame)
 window.addEventListener('click', clearModal)
-// main()
