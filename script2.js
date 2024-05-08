@@ -1,9 +1,9 @@
 //Tracks player Score and Robots Score
 let playerScore = 0
-let cpuScore = 0
+let plsyer2Score = 0
 //Creates variables for every element in the html
 const playerScore_span = document.getElementById('player-score')
-const cpuScore_span = document.getElementById('cpu-score')
+const plsyer2Score_span = document.getElementById('plsyer2-score')
 const restart = document.getElementById('restart')
 const result = document.getElementById('result')
 const modal = document.querySelector('.modal')
@@ -14,55 +14,69 @@ const scissors_div = document.getElementById('scissors')
 const darkColor = document.getElementById('darkMode')
 let dark = true
 
-//Function for Cpu's Choice
-const getCpuChoice = () => {
-  const choices = ['rock', 'paper', 'scissors']
-  const randomNumber = Math.floor(Math.random() * 3)
-  return choices[randomNumber]
-}
-
 //Function for winner check , increments player score
-const win = (playerChoice, cpuChoice) => {
+const win = (playerChoice, plsyer2Choice) => {
   playerScore++
   playerScore_span.innerHTML = playerScore
-  cpuScore_span.innerHTML = cpuScore
-  result.innerHTML = `<span class="close"></span> <h1 class="text-win">You win</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
+  plsyer2Score_span.innerHTML = plsyer2Score
+  result.innerHTML = `<h1 class="text-win">You win</h1> <p>Player 2 choose <strong>${plsyer2Choice}</strong></p>`
   modal.style.display = 'flex'
 }
-//function to check who loses, increments CPU score
-const lose = (playerChoice, cpuChoice) => {
-  cpuScore++
+//function to check who loses, increments plsyer2 score
+const lose = (playerChoice, plsyer2Choice) => {
+  plsyer2Score++
   playerScore_span.innerHTML = playerScore
-  cpuScore_span.innerHTML = cpuScore
-  result.innerHTML = `<span class="close"></span> <h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
+  plsyer2Score_span.innerHTML = plsyer2Score
+  result.innerHTML = `<h1 class="text-lose">You lost</h1> <p>Player 2 choose <strong>${plsyer2Choice}</strong></p>`
   modal.style.display = 'flex'
 }
 //checks if there is a draw
-const draw = (playerChoice, cpuChoice) => {
+const draw = (playerChoice, plsyer2Choice) => {
   playerScore_span.innerHTML = playerScore
-  cpuScore_span.innerHTML = cpuScore
-  result.innerHTML = `<span class="close"></span> <h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`
+  plsyer2Score_span.innerHTML = plsyer2Score
+  result.innerHTML = `<h1>It's a draw</h1> <p>You both choose <strong>${plsyer2Choice}</strong></p>`
   modal.style.display = 'flex'
 }
 
-//starts with player choice and randomly chooses who wins the round
+//Plsyer1 choice
 const play = (playerChoice) => {
-  const cpuChoice = getCpuChoice()
-  switch (playerChoice + cpuChoice) {
+  const plsyer2Choice = getplsyer2Choice()
+  switch (playerChoice + plsyer2Choice) {
     case 'rockscissors':
     case 'paperrock':
     case 'scissorspaper':
-      win(playerChoice, cpuChoice)
+      win(playerChoice, plsyer2Choice)
       break
     case 'rockpaper':
     case 'paperscissors':
     case 'scissorsrock':
-      lose(playerChoice, cpuChoice)
+      lose(playerChoice, plsyer2Choice)
       break
     case 'rockrock':
     case 'paperpaper':
     case 'scissorsscissors':
-      draw(playerChoice, cpuChoice)
+      draw(playerChoice, plsyer2Choice)
+      break
+  }
+}
+// player2 choice
+const play2 = (player2Choice) => {
+  const plsyerChoice = getplsyerChoice()
+  switch (plsyer2Choice + playerChoice) {
+    case 'rockscissors':
+    case 'paperrock':
+    case 'scissorspaper':
+      win(plsyer2Choice, playerChoice)
+      break
+    case 'rockpaper':
+    case 'paperscissors':
+    case 'scissorsrock':
+      lose(plsyer2Choice, playerChoice)
+      break
+    case 'rockrock':
+    case 'paperpaper':
+    case 'scissorsscissors':
+      draw(plsyer2Choice, playerChoice)
       break
   }
 }
@@ -83,7 +97,7 @@ const clearModal = (e) => {
   if (e.target == modal) {
     modal.style.display = 'none'
   } else if (closeBtn) {
-    closeBtn.addEventListener('click', function () {
+    closeBtn.addEventListener('click', () => {
       modal.style.display = 'none'
     })
   }
@@ -105,9 +119,9 @@ const darkMode = () => {
 //restart game and reset score to 0
 const restartGame = () => {
   playerScore = 0
-  cpuScore = 0
+  plsyer2Score = 0
   playerScore_span.innerHTML = playerScore
-  cpuScore_span.innerHTML = cpuScore
+  plsyer2Score_span.innerHTML = plsyer2Score
   modal.innerText = ' '
 }
 // Event listener for window click to call clearModal then hides it
