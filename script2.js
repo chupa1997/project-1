@@ -1,11 +1,9 @@
 //Tracks player Score and Robots Score
 let playerScore = 0
 let cpuScore = 0
-let player2Score = 0
 //Creates variables for every element in the html
 const playerScore_span = document.getElementById('player-score')
 const cpuScore_span = document.getElementById('cpu-score')
-const player2Score_span = document.getElementById('player2-score')
 const restart = document.getElementById('restart')
 const result = document.getElementById('result')
 const modal = document.querySelector('.modal')
@@ -29,14 +27,6 @@ const win = (playerChoice, cpuChoice) => {
   playerScore_span.innerHTML = playerScore
   cpuScore_span.innerHTML = cpuScore
   result.innerHTML = `<span class="close"></span> <h1 class="text-win">You win</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
-  modal.style.display = 'flex'
-}
-// for 2players
-const win2 = (playerChoice, player2Choice) => {
-  playerScore++
-  playerScore_span.innerHTML = playerScore
-  player2Score_span.innerHTML = player2Score
-  result.innerHTML = `<h1 class="text-win">Player One win</h1> <p>Comp choose <strong>${cpuChoice}</strong></p>`
   modal.style.display = 'flex'
 }
 //function to check who loses, increments CPU score

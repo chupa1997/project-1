@@ -36,7 +36,6 @@
 
 ### **_Future Updates_**
 
-- [ ] going to add more animations
 - [ ] 2 players option coming soon
 
 ---

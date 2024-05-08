@@ -59,6 +59,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.restart-btn:hover {
+  opacity: 10;
+  background-color: darkgray;
+}
 
 #darkMode {
   display: flex;
@@ -84,8 +88,20 @@ img {
   width: 30vh;
 }
 
-h1,
-h3,
-h4 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Vogan', sans-serif;
+  text-shadow: 2px 2px 5px whitesmoke;
+}
+.player2 {
+  padding: 10px;
+  color: cornflowerblue;
+  border-radius: 40px;
+}
+.player1 {
+  padding: 10px;
+  color: cornflowerblue;
+  border-radius: 40px;
 }
