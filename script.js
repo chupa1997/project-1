@@ -59,7 +59,6 @@ const win = (playerChoice, cpuChoice) => {
   playerScore_span.innerHTML = playerScore
   cpuScore_span.innerHTML = cpuScore
   result.innerHTML = `<h1 class="text-win">You win</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
-  result.style.display = 'flex'
 }
 //function to check who loses, increments CPU score
 const lose = (playerChoice, cpuChoice) => {
@@ -67,14 +66,12 @@ const lose = (playerChoice, cpuChoice) => {
   playerScore_span.innerHTML = playerScore
   cpuScore_span.innerHTML = cpuScore
   result.innerHTML = `<h1 class="text-lose">You lost</h1> <p>Computer choose <strong>${cpuChoice}</strong></p>`
-  result.style.display = 'flex'
 }
 //checks if there is a draw
 const draw = (playerChoice, cpuChoice) => {
   playerScore_span.innerHTML = playerScore
   cpuScore_span.innerHTML = cpuScore
   result.innerHTML = ` <h1>It's a draw</h1> <p>You both choose <strong>${cpuChoice}</strong></p>`
-  result.style.display = 'flex'
 }
 
 // function for DarkMode
